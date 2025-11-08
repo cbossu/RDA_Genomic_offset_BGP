@@ -1,5 +1,5 @@
 ---
-title: "BGP RDA genomic offset"
+title: "RDA genomic offset for the BGP"
 author: "CH Bossu"
 date: "2025-10-28"
 output: html_document
@@ -69,10 +69,10 @@ ped2geno("cawa.bqsr.miss0.2.qual30.1X.fst85.filtRda.noIndel.gl_impute.ped","cawa
 output=geno2lfmm("cawa.bqsr.miss0.2.qual30.1X.fst85.filtRda.noIndel.gl_impute.geno","cawa.bqsr.miss0.2.qual30.1X.fst85.filtRda.noIndel.gl_impute.lfmm")
 ```
 
-### Added individual column in awk using paste function
+### Added individual column in awk using paste function and saved as a .txt
 
 ```{r}
-gen.impall<-read.delim(file="input/cawa.bqsr.miss0.2.qual30.1X.fst85.filtRda.noIndel.gl_impute.lfmm_indcol",sep="\t",row.names=1,header=F)
+gen.impall<-read.delim(file="input/cawa.bqsr.miss0.2.qual30.1X.fst85.filtRda.noIndel.gl_impute.lfmm_indcol.txt",sep="\t",row.names=1,header=F)
 dim(gen.impall) #confirm you have the correct # of inds
 ```
 
